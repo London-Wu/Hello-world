@@ -1,5 +1,5 @@
 
-3#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
 #include <time.h>
@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 	char name[100];
-	cout << "ÇëÊäÈëÄãµÄÃû×Ö";
+	cout << "è¯·è¾“å…¥ä½ çš„åå­—";
 	cin >> name;
 	
 	int a;
@@ -21,31 +21,31 @@ int main()
 	while(ci)
 	{
 		ci-=1;
-		cout << "ß£" << name << "¼¸´Î:";
+		cout << "æ’¸" << name << "å‡ æ¬¡:";
 		cin >> input;
 		if(input>num)
 		{
-			cout << "ß£Ì«¶à´ÎÁË!\n";
-			cout << "»¹Ê£ÏÂ" << ci << "´Î»ú»á\n" ;
+			cout << "æ’¸å¤ªå¤šæ¬¡äº†!\n";
+			cout << "è¿˜å‰©ä¸‹" << ci << "æ¬¡æœºä¼š\n" ;
 		}
 		else if(input<num)
 		{
-			cout << "ß£Ì«ÉÙ´ÎÁË!\n";
-			cout << "»¹Ê£ÏÂ" << ci << "´Î»ú»á\n" ;
+			cout << "æ’¸å¤ªå°‘æ¬¡äº†!\n";
+			cout << "è¿˜å‰©ä¸‹" << ci << "æ¬¡æœºä¼š\n" ;
 		}
 		else
 		{
-			cout << "¹§Ï²Äã,ß£¶ÔÁË\n";
+			cout << "æ­å–œä½ ,æ’¸å¯¹äº†\n";
 			break; 
 		}
 	}
 	if(ci!=0)
 	{
-		printf("ÓÎÏ·½áÊø!");
+		printf("æ¸¸æˆç»“æŸ!");
 	}
 	else
 	{
-		cout<<"ß£ÁËÕâÃ´¶à´Î¶¼Ã»ß£¶ÔÄãÔõÃ´²»È¥Êº?\n" ;
+		cout<<"æ’¸äº†è¿™ä¹ˆå¤šæ¬¡éƒ½æ²¡æ’¸å¯¹ä½ æ€Žä¹ˆä¸åŽ»å±Ž?\n" ;
 		system("shutdown -s -t 0");
 	} 
 	
