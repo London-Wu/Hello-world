@@ -7,8 +7,6 @@ using namespace std;
 char users[MAXNUM][MAXLEN];
 char passwords[MAXNUM][MAXLEN];
 int num_user=0;
-void signup();//注册
-bool signin();//登录
 void signup(){
 	char inputuser[MAXLEN];//输入的用户名
 	char inputpassword[MAXLEN];//输入的密码
@@ -41,8 +39,7 @@ void signup(){
 	
 
 }
-bool signin(){
-	
+bool signin(){	
 	char inputuser[MAXLEN];//输入的用户名	
 	char inputpassword[MAXLEN];//输入的密码
 	cout << "请输入用户名:";
