@@ -63,6 +63,33 @@ bool signin(){
 	return false;
 }
 
+void change_password(){
+	char inputuser[MAXLEN];
+	char inputpassword[MAXLEN];
+	char newpassword[MAXLEN];
+	cout << "请输入要修改密码的用户:";
+	cin.getline(inputuser,MAXLEN);
+	for(int i=0;i<num_user;i++){
+		if(strcmp(inputuser,&users[i][0])==0){
+			cout << "请输入原密码:";
+			cin.getline(inputpassword,MAXLEN);
+			if(strcmp(inputpassword,&passwords[i][0])==0){
+				cout << "请输入新密码:" << endl;
+				cin.getline(newpassword,MAXLEN);
+				strcpy(&passwords[i][0],newpassword);
+				cout << "修改成功!";
+				return;
+			}
+			else{
+				cout << "密码不正确!" << endl;
+				return;
+			}
+			break;
+		}
+	}
+	cout << "找不到该用户" << endl;
+}
+
 
 
 
@@ -70,7 +97,7 @@ int main(){
 	char choose;
 	cout << "======欢迎使用用户管理终端======" << endl;
 	while(1){
-		cout << "请输入要进行的操作:\n(1-登录,2-注册,3-退出)" << endl;
+		cout << "请输入要进行的操作:\n(1-登录,2-注册,3-修改密码,4-退出)" << endl;
 		cout << ">>>";
 		cin >> choose;
 		cin.get();
@@ -86,6 +113,9 @@ int main(){
 				signup();
 				break;
 			case '3':
+				change_password();
+				break;
+			case '4':
 				cout << "您已退出系统" << endl;
 				return 0;
 			default:
