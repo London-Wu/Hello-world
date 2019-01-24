@@ -74,7 +74,7 @@ void change_password(){
 			cout << "请输入原密码:";
 			cin.getline(inputpassword,MAXLEN);
 			if(strcmp(inputpassword,&passwords[i][0])==0){
-				cout << "请输入新密码:" << endl;
+				cout << "请输入新密码:";
 				cin.getline(newpassword,MAXLEN);
 				strcpy(&passwords[i][0],newpassword);
 				cout << "修改成功!";
