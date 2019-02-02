@@ -11,13 +11,31 @@ using namespace std;
 
 void Selection_sort(int arr[],int len)
 {
-	
+	int i,j,pos,temp;
+	for(i = 0;i < len - 1;i++)
+	{
+		//寻找最小值的下标pos
+		for(j = i+1,pos=i;j < len;j++)
+		{
+			if(arr[j] < arr[pos])
+			{
+				pos = j;
+			}
+		}
+		if(pos != i)
+		{
+			//使第i到第len的值的最小值与第i个的值互换
+			temp = arr[i];
+			arr[i] = arr[pos];
+			arr[pos] = temp;
+		}
+	}
 }
 
 int main()
 {
-	int arr[] = {26,55,78,13,7,89,102,999,87,28,24,1,3,78,33};
-	len = sizeof(arr)/sizeof(arr[0]);
+	int arr[] = {26,55,83,13,7,89,102,999,87,28,24,1,3,78,33};
+	int len = sizeof(arr)/sizeof(arr[0]);
 	Selection_sort(arr,len);
 	for(int i;i<len;i++)
 	{
