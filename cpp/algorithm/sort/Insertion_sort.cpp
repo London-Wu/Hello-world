@@ -14,15 +14,12 @@ void Insertion_sort(int arr[],int len)
 	int i,j,temp;
 	for(i = 1;i < len;i++)
 	{
-		if(arr[i] < arr[i - 1])
+		temp = arr[i];
+		for(j = i - 1;j >= 0 && arr[j] > temp;j--)
 		{
-			temp = arr[i];
-			for(j = i - 1;j >= 0 && arr[j] > temp;j--)
-			{
-				arr[j + 1] = arr[j];
-			}
-			arr[j + 1] = temp;
-		}	
+			arr[j + 1] = arr[j];
+		}
+		arr[j + 1] = temp;	
 	}
 }
 
